@@ -243,7 +243,7 @@
 
           <div class="col-lg-7">
             <form action="https://script.google.com/macros/s/AKfycbw0CuqwG0uCATjvbq6plrqwV_F6w5y6qSF13tbdCBW0uxOCzVXQvMAwVXINmsec-gsH/exec" 
-              method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              method="GET" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -258,18 +258,20 @@
 
                 <div class="col-md-12">
                   <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                  <input type="text" class="form-control"  name="subject" id="subject-field"
+                  maxlength="2000" required="">
                 </div>
 
                 <div class="col-md-12">
                   <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                  <textarea class="form-control" name="message" 
+                  rows="10" id="message-field" placeholder="Max 2000 character" required=""></textarea>
                 </div>
-
+                <div>You entered: <span id="wordCount">0</span>/2000 char</div>
                 <div class="col-md-12 text-center">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="sent-message" >Your message has been sent. Thank you!</div>
 
                   <button type="submit">Send Message</button>
                 </div>
